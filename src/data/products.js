@@ -48,7 +48,7 @@ export const products = [
   },
   {
     id: 'omot', title: 'Omot za knjigu Cvjetić', cat: 'zanju dom', label: 'Za nju · Za dom', badge: 'Novo',
-    img: 'omot-knjiga.webp', w: 640, h: 640,
+    img: 'omot-knjiga.webp', w: 480, h: 640,
     desc: 'Pleteni omot za knjigu s heklanim cvjetićima. Čuva vašu omiljenu knjigu i izgleda predivno na noćnom ormariću.',
   },
 ];
