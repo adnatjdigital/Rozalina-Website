@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="bs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rozalina Handmade · Ručno rađeni pokloni iz Zenice</title>
+  <meta name="description" content="Rozalina Handmade: heklane papučice, puffy dekice, mede, bidermajeri, poklon boxići i personalizovani pokloni. Ručno rađeno s ljubavlju u Zenici.">
+  <meta name="theme-color" content="#b8607a">
+  <meta property="og:title" content="Rozalina Handmade · Ručno rađeno s ljubavlju">
+  <meta property="og:description" content="Heklani i pleteni pokloni za bebe, vjenčanja i vaše najdraže. Iz Zenice, s ljubavlju.">
+  <meta property="og:image" content="images/papucice.webp">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="images/logo-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,400;1,500&family=Great+Vibes&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<canvas id="petals" aria-hidden="true"></canvas>
+
+<!-- Top bar -->
+<div class="topbar">
+  <div class="container topbar__inner">
+    <p class="topbar__msg">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.3C.9 8.2 3 4.5 6.6 4.5c2.1 0 3.6 1.2 5.4 3.2 1.8-2 3.3-3.2 5.4-3.2 3.6 0 5.7 3.7 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg>
+      <span class="topbar__rotator" data-rotator>
+        <span class="is-active">Svaki komad ručno rađen s puno ljubavi</span>
+        <span>Narudžbe primamo putem Instagrama i Facebooka</span>
+        <span>Personalizacija po vašoj želji: ime, boja, natpis</span>
+      </span>
+    </p>
+    <div class="topbar__social">
+      <a href="https://www.facebook.com/groups/192995836919415/" target="_blank" rel="noopener" aria-label="Facebook grupa">
+        <svg class="ico" viewBox="0 0 24 24"><path d="M14 8.5V6.8c0-.8.5-1.3 1.3-1.3H17V2.3h-2.6C11.6 2.3 10.5 4 10.5 6.6v1.9H8v3.2h2.5V22H14V11.7h2.6l.4-3.2z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/rozalina_handmade/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg class="ico ico--stroke" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r=".9" class="dot"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="#pocetna" class="logo" aria-label="Rozalina Handmade, početna">
+      <img src="images/logo-mark.svg" alt="" class="logo__mark" width="44" height="44">
+      <span class="logo__text">
+        <span class="logo__name">Rozalina</span>
+        <span class="logo__sub">handmade</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Glavna navigacija">
+      <a href="#pocetna" class="is-active">Početna</a>
+      <a href="#ponuda">Ponuda</a>
+      <a href="#kolekcije">Kolekcije</a>
+      <a href="#po-zelji">Po želji</a>
+      <a href="#o-meni">O meni</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="https://ig.me/m/rozalina_handmade" target="_blank" rel="noopener" class="btn btn--rose nav__cta">Naruči</a>
+    </nav>
+
+    <div class="header__actions">
+      <button class="icon-btn wish-count" type="button" aria-label="Omiljeni proizvodi" data-wish-open>
+        <svg class="ico ico--stroke" viewBox="0 0 24 24"><path d="M12 20s-7-4.3-9-8.7C1.6 8 3.5 4.8 6.8 4.8c2 0 3.4 1.1 5.2 3 1.8-1.9 3.2-3 5.2-3 3.3 0 5.2 3.2 3.8 6.5C19 15.7 12 20 12 20z"/></svg>
+        <span class="wish-count__n" data-wish-n>0</span>
+      </button>
+      <a href="https://ig.me/m/rozalina_handmade" target="_blank" rel="noopener" class="btn btn--rose header__cta">Naruči</a>
+      <button class="burger" id="burger" type="button" aria-label="Otvori meni" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- Hero slider -->
+<section class="hero" id="pocetna" aria-roledescription="carousel" aria-label="Izdvojeno">
+  <div class="hero__bg" aria-hidden="true">
+    <span class="blob blob--1"></span>
+    <span class="blob blob--2"></span>
+    <span class="blob blob--3"></span>
+  </div>
+
+  <div class="hero__slides">
+    <article class="slide is-active" aria-roledescription="slide" aria-label="1 od 3">
+      <div class="container slide__inner">
+        <div class="slide__copy">
+          <p class="eyebrow">Novo u ponudi</p>
+          <h1 class="slide__title">Ručno rađeno.<br><em>S puno ljubavi.</em></h1>
+          <p class="slide__text">Heklani i pleteni pokloni iz Zenice, napravljeni za vaše najdraže trenutke i one koje volite.</p>
+          <div class="slide__btns">
+            <a href="#ponuda" class="btn btn--rose btn--lg">Pogledaj ponudu</a>
+            <a href="https://ig.me/m/rozalina_handmade" target="_blank" rel="noopener" class="btn btn--ghost btn--lg">Pošalji poruku</a>
+          </div>
+        </div>
+        <div class="slide__art">
+          <figure class="arch arch--main"><img src="images/papucice.webp" alt="Roze heklane papučice za bebe" width="640" height="640"></figure>
+          <figure class="bubble bubble--a"><img src="images/meda.webp" alt="" width="360" height="420"></figure>
+          <figure class="bubble bubble--b"><img src="images/poklon-boxic.webp" alt="" width="360" height="640"></figure>
+          <span class="tag-float tag-float--1">✿ handmade</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="slide" aria-roledescription="slide" aria-label="2 od 3">
+      <div class="container slide__inner">
+        <div class="slide__copy">
+          <p class="eyebrow">Za najmlađe</p>
+          <h2 class="slide__title">Mekano, toplo<br><em>i ušuškano.</em></h2>
+          <p class="slide__text">Puffy dekice, mede i papučice od mekane pređe. Ime bebe dodajemo po želji.</p>
+          <div class="slide__btns">
+            <a href="#ponuda" data-filter-link="bebe" class="btn btn--rose btn--lg">Za bebe</a>
+          </div>
+        </div>
+        <div class="slide__art">
+          <figure class="arch arch--main"><img src="images/puffy-dekica.webp" alt="Plava puffy dekica s imenom" width="480" height="640"></figure>
+          <figure class="bubble bubble--a"><img src="images/papucice.webp" alt="" width="640" height="640"></figure>
+          <figure class="bubble bubble--b"><img src="images/meda.webp" alt="" width="360" height="420"></figure>
+          <span class="tag-float tag-float--1">♡ s imenom bebe</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="slide" aria-roledescription="slide" aria-label="3 od 3">
+      <div class="container slide__inner">
+        <div class="slide__copy">
+          <p class="eyebrow">Za vaš poseban dan</p>
+          <h2 class="slide__title">Bidermajer<br><em>koji priča priču.</em></h2>
+          <p class="slide__text">Bidermajeri i kićenice s bisernim detaljima, usklađeni s vašom svadbom do najsitnijeg detalja.</p>
+          <div class="slide__btns">
+            <a href="#ponuda" data-filter-link="vjencanja" class="btn btn--rose btn--lg">Vjenčanja</a>
+          </div>
+        </div>
+        <div class="slide__art">
+          <figure class="arch arch--main"><img src="images/bidermajer.webp" alt="Bijeli bidermajer za mladu" width="360" height="300"></figure>
+          <figure class="bubble bubble--a"><img src="images/kicenice.webp" alt="" width="360" height="270"></figure>
+          <figure class="bubble bubble--b"><img src="images/buket.webp" alt="" width="318" height="512"></figure>
+          <span class="tag-float tag-float--1">✦ za mladu</span>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <button class="hero__arrow hero__arrow--prev" type="button" aria-label="Prethodni slajd" data-prev>
+    <svg viewBox="0 0 24 24" class="ico ico--stroke"><path d="M15 5l-7 7 7 7"/></svg>
+  </button>
+  <button class="hero__arrow hero__arrow--next" type="button" aria-label="Sljedeći slajd" data-next>
+    <svg viewBox="0 0 24 24" class="ico ico--stroke"><path d="M9 5l7 7-7 7"/></svg>
+  </button>
+  <div class="hero__dots" role="tablist" aria-label="Odaberi slajd">
+    <button class="is-active" type="button" aria-label="Slajd 1"></button>
+    <button type="button" aria-label="Slajd 2"></button>
+    <button type="button" aria-label="Slajd 3"></button>
+  </div>
+</section>
+
+<!-- Features -->
+<section class="features container" aria-label="Zašto Rozalina">
+  <div class="feature reveal">
+    <span class="feature__ico"><svg viewBox="0 0 32 32" class="ico ico--stroke"><path d="M16 27c-6 0-10-4.2-10-9.8C6 11.7 10.3 7 16 7s10 4.3 10 9.6c0 4-3 7-7 7-3.3 0-5.6-2.3-5.6-5.1 0-2.4 1.8-4.2 4.1-4.2 1.9 0 3.3 1.4 3.3 3.1"/><path d="M23 4l-4 6"/></svg></span>
+    <div><h3>Ručno rađeno</h3><p>Svaki komad izrađen pojedinačno</p></div>
+  </div>
+  <div class="feature reveal">
+    <span class="feature__ico"><svg viewBox="0 0 32 32" class="ico ico--stroke"><path d="M16 4c4 4 9 5 9 12a9 9 0 0 1-18 0c0-7 5-8 9-12z"/><path d="M16 12v14"/><path d="M16 18l4-3"/><path d="M16 21l-4-3"/></svg></span>
+    <div><h3>Pažljivo birani materijali</h3><p>Mekana, kvalitetna pređa</p></div>
+  </div>
+  <div class="feature reveal">
+    <span class="feature__ico"><svg viewBox="0 0 32 32" class="ico ico--stroke"><path d="M6 24l3-1L24 8a2.1 2.1 0 0 0-3-3L6 20z"/><path d="M19 7l3 3"/><path d="M14 26h12"/></svg></span>
+    <div><h3>Po vašoj želji</h3><p>Ime, boja i natpis po izboru</p></div>
+  </div>
+  <div class="feature reveal">
+    <span class="feature__ico"><svg viewBox="0 0 32 32" class="ico ico--stroke"><rect x="5" y="12" width="22" height="15" rx="2"/><path d="M3 8h26v4H3z"/><path d="M16 8v19"/><path d="M16 8c-2-4-7-5-7-2s5 2 7 2c2 0 7 1 7-2s-5-2-7 2z"/></svg></span>
+    <div><h3>Upakovano s pažnjom</h3><p>Spremno za darivanje</p></div>
+  </div>
+</section>
+
+<!-- Collections -->
+<section class="section" id="kolekcije">
+  <div class="container">
+    <header class="section__head reveal">
+      <p class="eyebrow eyebrow--center">Kolekcije</p>
+      <h2 class="section__title">Pronađi savršen poklon</h2>
+      <span class="divider" aria-hidden="true">✿</span>
+    </header>
+    <div class="cats">
+      <a href="#ponuda" class="cat reveal" data-filter-link="bebe"><span class="cat__img"><img src="images/papucice.webp" alt="" loading="lazy" width="640" height="640"></span><span class="cat__name">Za bebe</span></a>
+      <a href="#ponuda" class="cat reveal" data-filter-link="vjencanja"><span class="cat__img"><img src="images/bidermajer.webp" alt="" loading="lazy" width="360" height="300"></span><span class="cat__name">Vjenčanja</span></a>
+      <a href="#ponuda" class="cat reveal" data-filter-link="pokloni"><span class="cat__img"><img src="images/buket.webp" alt="" loading="lazy" width="318" height="512"></span><span class="cat__name">Pokloni</span></a>
+      <a href="#ponuda" class="cat reveal" data-filter-link="zanju"><span class="cat__img"><img src="images/kapa-sal.webp" alt="" loading="lazy" width="640" height="640"></span><span class="cat__name">Za nju</span></a>
+      <a href="#ponuda" class="cat reveal" data-filter-link="dom"><span class="cat__img"><img src="images/rahla.webp" alt="" loading="lazy" width="360" height="580"></span><span class="cat__name">Za dom</span></a>
+      <a href="#po-zelji" class="cat reveal"><span class="cat__img"><img src="images/solje.webp" alt="" loading="lazy" width="150" height="150"></span><span class="cat__name">Po želji</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- Promo banner -->
+<section class="promo container reveal" aria-label="Boxić dobrodošlice">
+  <div class="promo__copy">
+    <p class="eyebrow eyebrow--light">Omiljeni poklon</p>
+    <h2>Boxić dobrodošlice<br>za novu bebu</h2>
+    <p>Poklon korpa za novorođenče s medom, odjećicom i mašnom u boji po izboru. Upakovana s puno pažnje, spremna da obraduje cijelu porodicu.</p>
+    <a href="https://ig.me/m/rozalina_handmade" target="_blank" rel="noopener" class="btn btn--white">Naruči svoj boxić</a>
+    <span class="promo__sparkle" aria-hidden="true">✦</span>
+  </div>
+  <div class="promo__media">
+    <img src="images/poklon-boxic.webp" alt="Poklon korpa za bebu s plavom mašnom" loading="lazy" width="360" height="640">
+    <img src="images/papucice.webp" alt="" loading="lazy" class="promo__inset" width="640" height="640">
+  </div>
+</section>
+
+<!-- Products -->
+<section class="section" id="ponuda">
+  <div class="container">
+    <header class="section__head section__head--row reveal">
+      <div>
+        <p class="eyebrow">Iz radionice</p>
+        <h2 class="section__title">Najljepše iz ponude</h2>
+      </div>
+      <div class="filters" role="tablist" aria-label="Filtriraj proizvode">
+        <button class="chip is-active" type="button" data-filter="sve">Sve</button>
+        <button class="chip" type="button" data-filter="bebe">Za bebe</button>
+        <button class="chip" type="button" data-filter="vjencanja">Vjenčanja</button>
+        <button class="chip" type="button" data-filter="pokloni">Pokloni</button>
+        <button class="chip" type="button" data-filter="zanju">Za nju</button>
+        <button class="chip" type="button" data-filter="dom">Za dom</button>
+      </div>
+    </header>
+
+    <div class="products" id="products">
+      <article class="card reveal" data-cat="bebe" data-id="papucice" data-desc="Heklane papučice za bebe od mekane pređe, ukrašene mašnicama. Prave se u boji po izboru: roze, plavoj, bijeloj ili kako vi poželite.">
+        <div class="card__media"><img src="images/papucice.webp" alt="Papučice Ružica" loading="lazy" width="640" height="640"><span class="badge">Omiljeno</span></div>
+        <button class="card__wish" type="button" aria-label="Dodaj u omiljene" aria-pressed="false"><svg viewBox="0 0 24 24" class="ico ico--stroke"><path d="M12 20s-7-4.3-9-8.7C1.6 8 3.5 4.8 6.8 4.8c2 0 3.4 1.1 5.2 3 1.8-1.9 3.2-3 5.2-3 3.3 0 5.2 3.2 3.8 6.5C19 15.7 12 20 12 20z"/></svg></button>
+        <div class="card__body"><p class="card__cat">Za bebe</p><h3 class="card__title">Papučice Ružica</h3><p class="card__price">Izrada po narudžbi</p><button class="btn btn--rose btn--sm card__btn" type="button">Pogledaj</button></div>
+      </article>
+
+      <article class="card reveal" data-cat="bebe pokloni" data-id="boxic" data-desc="Poklon korpa za novorođenče s plišanim medom, odjećicom i mašnom. Sastavljamo je u bojama koje odaberete, za dječaka ili djevojčicu.">
+        <div class="card__media"><img src="images/poklon-boxic.webp" alt="Boxić dobrodošlice" loading="lazy" width="360" height="640"><span class="badge badge--gold">Poklon</span></div>
+        <button class="card__wish" type="button" aria-label="Dodaj u omiljene" aria-pressed="false"><svg viewBox="0 0 24 24" class="ico ico--stroke"><path d="M12 20s-7-4.3-9-8.7C1.6 8 3.5 4.8 6.8 4.8c2 0 3.4 1.1 5.2 3 1.8-1.9 3.2-3 5.2-3 3.3 0 5.2 3.2 3.8 6.5C19 15.7 12 20 12 20z"/></svg></button>
+        <div class="card__body"><p class="card__cat">Za bebe · Pokloni</p><h3 class="card__title">Boxić dobrodošlice</h3><p class="card__price">Izrada po narudžbi</p><button class="btn btn--rose btn--sm card__btn" type="button">Pogledaj</button></div>
+      </article>
+
+      <article class="card reveal" data-cat="bebe" data-id="puffy" data-desc="Mekana i ušuškana puffy dekica od pliš pređe, s ušivenom pločicom s imenom bebe. Savršena za kolica, krevetić i prve zagrljaje.">
+        <div class="card__media"><img src="images/puffy-dekica.webp" alt="Puffy dekica" loading="lazy" width="480" height="640"><span class="badge">S imenom</span></div>
+        <button class="card__wish" type="button" aria-label="Dodaj u omiljene" aria-pressed="false"><svg viewBox="0 0 24 24" class="ico ico--stroke"><path d="M12 20s-7-4.3-9-8.7C1.6 8 3.5 4.8 6.8 4.8c2 0 3.4 1.1 5.2 3 1.8-1.9 3.2-3 5.2-3 3.3 0 5.2 3.2 3.8 6.5C19 15.7 12 20 12 20z"/></svg></button>
+        <div class="card__body"><p class="card__cat">Za bebe</p><h3 class="card__title">Puffy dekica</h3><p class="card__price">Izrada po narudžbi</p><button class="btn btn--rose btn--sm card__btn" type="button">Pogledaj</button></div>
+      </article>
+
+      <article class="card reveal" data-cat="bebe pokloni" data-id="meda" data-desc="Veliki heklani meda od puffy pređe, mekan za maženje i dovoljno velik za grljenje. Prijatelj koji ostaje godinama.">
+        <div class="card__media"><img src="images/meda.webp" alt="Meda Plavi oblak" loading="lazy" width="360" height="420"></div>
+        <button class="card__wish" type="button" aria-label="Dodaj u omiljene" aria-pressed="false"><svg viewBox="0 0 24 24" class="ico ico--stroke"><path d="M12 20s-7-4.3-9-8.7C1.6 8 3.5 4.8 6.8 4.8c2 0 3.4 1.1 5.2 3 1.8-1.9 3.2-3 5.2-3 3.3 0 5.2 3.2 3.8 6.5C19 15.7 12 20 12 20z"/></svg></button>
+        <div class="card__body"><p class="card__cat">Za bebe · Pokloni</p><h3 class="card__title">Meda Plavi oblak</h3><p class="card__price">Izrada po narudžbi</p><button class="btn btn--rose btn--sm card__btn" type="button">Pogledaj</button></div>
+      </article>
+
+      <article class="card reveal" data-cat="vjencanja" data-id="bidermajer" data-desc="Bidermajer od bijelih ruža s bisernim detaljima i grančicama šlajera. Pravimo ga usklađenog s vašom vjenčanicom i kićenicama.">
+        <div class="card__media"><img src="images/bidermajer.webp" alt="Bidermajer Bijela ruža" loading="lazy" width="360" height="300"><span class="badge badge--gold">Za mladu</span></div>
+        <button class="card__wish" type="button" aria-label="Dodaj u omiljene" aria-pressed="false"><svg viewBox="0 0 24 24" class="ico ico--stroke"><path d="M12 20s-7-4.3-9-8.7C1.6 8 3.5 4.8 6.8 4.8c2 0 3.4 1.1 5.2 3 1.8-1.9 3.2-3 5.2-3 3.3 0 5.2 3.2 3.8 6.5C19 15.7 12 20 12 20z"/></svg></button>
+        <div class="card__body"><p class="card__cat">Vjenčanja</p><h3 class="card__title">Bidermajer Bijela ruža</h3><p class="card__price">Izrada po narudžbi</p><button class="btn btn--rose btn--sm card__btn" type="button">Pogledaj</button></div>
+      </article>
+
+      <article class="card reveal" data-cat="vjencanja" data-id="kicenice" data-desc="Kićenice za svatove s bijelim ružicama, satenskim trakama i biserima, u setu s bidermajerom za mladu.">
+        <div class="card__media"><img src="images/kicenice.webp" alt="Kićenice za svatove" loading="lazy" width="360" height="270"></div>
+        <button class="card__wish" type="button" aria-label="Dodaj u omiljene" aria-pressed="false"><svg viewBox="0 0 24 24" class="ico ico--stroke"><path d="M12 20s-7-4.3-9-8.7C1.6 8 3.5 4.8 6.8 4.8c2 0 3.4 1.1 5.2 3 1.8-1.9 3.2-3 5.2-3 3.3 0 5.2 3.2 3.8 6.5C19 15.7 12 20 12 20z"/></svg></button>
+        <div class="card__body"><p class="card__cat">Vjenčanja</p><h3 class="card__title">Kićenice za svatove</h3><p class="card__price">Izrada po narudžbi</p><button class="btn btn--rose btn--sm card__btn" type="button">Pogledaj</button></div>
+      </article>
+
+      <article class="card reveal" data-cat="pokloni" data-id="buket" data-desc="Buket crvenih satenskih ruža koje nikad ne venu, s plišanim iznenađenjem u sredini. Poklon za rođendan, godišnjicu ili samo tako.">
+        <div class="card__media"><img src="images/buket.webp" alt="Buket satenskih ruža" loading="lazy" width="318" height="512"><span class="badge">Novo</span></div>
+        <button class="card__wish" type="button" aria-label="Dodaj u omiljene" aria-pressed="false"><svg viewBox="0 0 24 24" class="ico ico--stroke"><path d="M12 20s-7-4.3-9-8.7C1.6 8 3.5 4.8 6.8 4.8c2 0 3.4 1.1 5.2 3 1.8-1.9 3.2-3 5.2-3 3.3 0 5.2 3.2 3.8 6.5C19 15.7 12 20 12 20z"/></svg></button>
+        <div class="card__body"><p class="card__cat">Pokloni</p><h3 class="card__title">Buket satenskih ruža</h3><p class="card__price">Izrada po narudžbi</p><button class="btn btn--rose btn--sm card__btn" type="button">Pogledaj</button></div>
+      </article>
+
+      <article class="card reveal" data-cat="dom pokloni" data-id="rahla" data-desc="Ručno rađena rahla, stalak za Kur'an, s nježnim cvjetnim detaljima. Poklon s posebnim značenjem za mamu, nenu ili vaš dom.">
+        <div class="card__media"><img src="images/rahla.webp" alt="Rahla, stalak za Kur'an" loading="lazy" width="360" height="580"></div>
+        <button class="card__wish" type="button" aria-label="Dodaj u omiljene" aria-pressed="false"><svg viewBox="0 0 24 24" class="ico ico--stroke"><path d="M12 20s-7-4.3-9-8.7C1.6 8 3.5 4.8 6.8 4.8c2 0 3.4 1.1 5.2 3 1.8-1.9 3.2-3 5.2-3 3.3 0 5.2 3.2 3.8 6.5C19 15.7 12 20 12 20z"/></svg></button>
+        <div class="card__body"><p class="card__cat">Za dom · Pokloni</p><h3 class="card__title">Rahla s cvjetovima</h3><p class="card__price">Izrada po narudžbi</p><button class="btn btn--rose btn--sm card__btn" type="button">Pogledaj</button></div>
+      </article>
+
+      <article class="card reveal" data-cat="zanju" data-id="kapa" data-desc="Debela heklana kapa i šal od mekane pređe za hladne dane. Dostupno u više boja, a crvena je naša omiljena za zimu.">
+        <div class="card__media"><img src="images/kapa-sal.webp" alt="Kapa i šal Zimska ruža" loading="lazy" width="640" height="640"><span class="badge">Zima</span></div>
+        <button class="card__wish" type="button" aria-label="Dodaj u omiljene" aria-pressed="false"><svg viewBox="0 0 24 24" class="ico ico--stroke"><path d="M12 20s-7-4.3-9-8.7C1.6 8 3.5 4.8 6.8 4.8c2 0 3.4 1.1 5.2 3 1.8-1.9 3.2-3 5.2-3 3.3 0 5.2 3.2 3.8 6.5C19 15.7 12 20 12 20z"/></svg></button>
+        <div class="card__body"><p class="card__cat">Za nju</p><h3 class="card__title">Kapa i šal Zimska ruža</h3><p class="card__price">Izrada po narudžbi</p><button class="btn btn--rose btn--sm card__btn" type="button">Pogledaj</button></div>
+      </article>
+
+      <article class="card reveal" data-cat="zanju dom" data-id="omot" data-desc="Pleteni omot za knjigu s heklanim cvjetićima. Čuva vašu omiljenu knjigu i izgleda predivno na noćnom ormariću.">
+        <div class="card__media"><img src="images/omot-knjiga.webp" alt="Pleteni omot za knjigu" loading="lazy" width="640" height="640"><span class="badge">Novo</span></div>
+        <button class="card__wish" type="button" aria-label="Dodaj u omiljene" aria-pressed="false"><svg viewBox="0 0 24 24" class="ico ico--stroke"><path d="M12 20s-7-4.3-9-8.7C1.6 8 3.5 4.8 6.8 4.8c2 0 3.4 1.1 5.2 3 1.8-1.9 3.2-3 5.2-3 3.3 0 5.2 3.2 3.8 6.5C19 15.7 12 20 12 20z"/></svg></button>
+        <div class="card__body"><p class="card__cat">Za nju · Za dom</p><h3 class="card__title">Omot za knjigu Cvjetić</h3><p class="card__price">Izrada po narudžbi</p><button class="btn btn--rose btn--sm card__btn" type="button">Pogledaj</button></div>
+      </article>
+    </div>
+    <p class="products__empty" hidden>Uskoro novi proizvodi u ovoj kategoriji. ✿</p>
+  </div>
+</section>
+
+<!-- Marquee -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>Ručno rađeno</span><i>✿</i><span>S ljubavlju</span><i>✿</i><span>Made in BiH</span><i>✿</i><span>Pažljivo birani materijali</span><i>✿</i><span>Po vašoj želji</span><i>✿</i>
+    <span>Ručno rađeno</span><i>✿</i><span>S ljubavlju</span><i>✿</i><span>Made in BiH</span><i>✿</i><span>Pažljivo birani materijali</span><i>✿</i><span>Po vašoj želji</span><i>✿</i>
+  </div>
+</div>
+
+<!-- Custom orders -->
+<section class="section section--blush" id="po-zelji">
+  <div class="container custom">
+    <div class="custom__copy reveal">
+      <p class="eyebrow">Po vašoj želji</p>
+      <h2 class="section__title">Imate ideju?<br><em>Napravit ćemo je zajedno.</em></h2>
+      <p>Osim heklanih radova, izrađujemo i personalizovane poklone: šolje s imenom, vezice za dude, postere s posvetom i poklon kutije. Recite nam za koga je poklon, a mi ćemo se pobrinuti da bude baš njegov.</p>
+      <a href="https://ig.me/m/rozalina_handmade" target="_blank" rel="noopener" class="btn btn--rose btn--lg">Pošalji svoju ideju</a>
+    </div>
+    <ul class="custom__list">
+      <li class="mini reveal"><span class="mini__img"><img src="images/solje.webp" alt="" loading="lazy" width="150" height="150"></span><span><strong>Šolje s natpisom</strong><small>Ime, datum ili posveta</small></span></li>
+      <li class="mini reveal"><span class="mini__img"><img src="images/vezice.webp" alt="" loading="lazy" width="150" height="150"></span><span><strong>Vezice za dude</strong><small>Heklane, s imenom bebe</small></span></li>
+      <li class="mini reveal"><span class="mini__img"><img src="images/poster.webp" alt="" loading="lazy" width="150" height="150"></span><span><strong>Posteri s posvetom</strong><small>Za maturu, diplomu, rođendan</small></span></li>
+      <li class="mini reveal"><span class="mini__img"><img src="images/poklon-kutija.webp" alt="" loading="lazy" width="150" height="150"></span><span><strong>Poklon kutije</strong><small>Složene i upakovane za vas</small></span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- About -->
+<section class="section" id="o-meni">
+  <div class="container about">
+    <div class="about__media reveal">
+      <figure class="arch arch--about"><img src="images/rozalina.webp" alt="Rozalina hekla u svojoj radionici" loading="lazy" width="360" height="490"></figure>
+      <div class="about__badge">
+        <strong>1.000+</strong>
+        <span>pratilaca na Instagramu</span>
+      </div>
+    </div>
+    <div class="about__copy reveal">
+      <p class="eyebrow">O meni</p>
+      <h2 class="section__title">Budi dio ostvarenja<br><em>nečijeg sna</em></h2>
+      <p>Zdravo, ja sam Rozalina. Moja priča počela je s heklicom, klupkom vune i željom da od hobija napravim nešto veliko. Danas iz moje male radionice u Zenici izlaze papučice, dekice, mede, bidermajeri i pokloni koji putuju na adrese širom naše zemlje.</p>
+      <p>Najljepši mi je osjećaj kada zamislim kako će nešto izgledati, a ono bude još ljepše nego što sam mislila. Svaki komad radim polako, s pažnjom i od pažljivo biranih materijala.</p>
+      <blockquote class="quote">
+        „Možda je moj biznis mali, ali su moji snovi veliki.”
+        <cite>Rozalina</cite>
+      </blockquote>
+      <p class="signature">S ljubavlju, Rozalina</p>
+    </div>
+  </div>
+</section>
+
+<!-- How to order -->
+<section class="section section--blush">
+  <div class="container">
+    <header class="section__head reveal">
+      <p class="eyebrow eyebrow--center">Kako naručiti</p>
+      <h2 class="section__title">Tri koraka do vašeg poklona</h2>
+      <span class="divider" aria-hidden="true">✿</span>
+    </header>
+    <ol class="steps">
+      <li class="step reveal"><span class="step__n">01</span><h3>Odaberite</h3><p>Pogledajte ponudu ili nam pošaljite sliku i ideju koju imate na umu.</p></li>
+      <li class="step reveal"><span class="step__n">02</span><h3>Dogovorimo detalje</h3><p>U poruci se dogovaramo oko boje, imena, natpisa i roka izrade.</p></li>
+      <li class="step reveal"><span class="step__n">03</span><h3>Izrada s ljubavlju</h3><p>Vaš poklon ručno izrađujemo, pažljivo pakujemo i šaljemo na vašu adresu.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- Instagram -->
+<section class="section" id="instagram">
+  <div class="container">
+    <header class="section__head section__head--row reveal">
+      <div>
+        <p class="eyebrow">Instagram</p>
+        <h2 class="section__title">@rozalina_handmade</h2>
+      </div>
+      <a href="https://www.instagram.com/rozalina_handmade/" target="_blank" rel="noopener" class="link-arrow">Zaprati nas <span aria-hidden="true">→</span></a>
+    </header>
+    <div class="insta">
+      <a href="https://www.instagram.com/rozalina_handmade/" target="_blank" rel="noopener" class="insta__item reveal"><img src="images/puffy-dekica.webp" alt="Puffy dekica na Instagramu" loading="lazy" width="480" height="640"></a>
+      <a href="https://www.instagram.com/rozalina_handmade/" target="_blank" rel="noopener" class="insta__item reveal"><img src="images/buket.webp" alt="Buket na Instagramu" loading="lazy" width="318" height="512"></a>
+      <a href="https://www.instagram.com/rozalina_handmade/" target="_blank" rel="noopener" class="insta__item reveal"><img src="images/rahla.webp" alt="Rahla na Instagramu" loading="lazy" width="360" height="580"></a>
+      <a href="https://www.instagram.com/rozalina_handmade/" target="_blank" rel="noopener" class="insta__item reveal"><img src="images/omot-knjiga.webp" alt="Omot za knjigu na Instagramu" loading="lazy" width="640" height="640"></a>
+      <a href="https://www.instagram.com/rozalina_handmade/" target="_blank" rel="noopener" class="insta__item reveal"><img src="images/poklon-boxic.webp" alt="Boxić za bebe na Instagramu" loading="lazy" width="360" height="640"></a>
+      <a href="https://www.instagram.com/rozalina_handmade/" target="_blank" rel="noopener" class="insta__item reveal"><img src="images/kapa-sal.webp" alt="Kapa i šal na Instagramu" loading="lazy" width="640" height="640"></a>
+    </div>
+  </div>
+</section>
+
+<!-- Trust strip -->
+<section class="trust" aria-label="Prednosti">
+  <div class="container trust__inner">
+    <div class="trust__item"><svg viewBox="0 0 24 24" class="ico ico--stroke"><path d="M12 20s-7-4.3-9-8.7C1.6 8 3.5 4.8 6.8 4.8c2 0 3.4 1.1 5.2 3 1.8-1.9 3.2-3 5.2-3 3.3 0 5.2 3.2 3.8 6.5C19 15.7 12 20 12 20z"/></svg><div><strong>Ručna izrada</strong><span>Svaki komad je unikat</span></div></div>
+    <div class="trust__item"><svg viewBox="0 0 24 24" class="ico ico--stroke"><path d="M4 18l2.5-.8L18 5.7a1.8 1.8 0 0 0-2.5-2.5L4 14.7z"/><path d="M10 20h10"/></svg><div><strong>Personalizacija</strong><span>Ime, boja i natpis</span></div></div>
+    <div class="trust__item"><svg viewBox="0 0 24 24" class="ico ico--stroke"><rect x="3" y="9" width="18" height="12" rx="1.5"/><path d="M2 6h20v3H2zM12 6v15"/></svg><div><strong>Upakovano kao poklon</strong><span>Spremno za darivanje</span></div></div>
+    <div class="trust__item"><svg viewBox="0 0 24 24" class="ico ico--stroke"><path d="M4 5h16v11H8l-4 4z"/></svg><div><strong>Narudžba u poruci</strong><span>Instagram i Facebook</span></div></div>
+  </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer" id="kontakt">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a href="#pocetna" class="logo logo--light" aria-label="Rozalina Handmade">
+        <img src="images/logo-mark.svg" alt="" class="logo__mark" width="44" height="44">
+        <span class="logo__text"><span class="logo__name">Rozalina</span><span class="logo__sub">handmade</span></span>
+      </a>
+      <p>Ručno rađeni pokloni za bebe, vjenčanja i vaše najdraže. Iz Zenice, s ljubavlju.</p>
+      <div class="footer__social">
+        <a href="https://www.instagram.com/rozalina_handmade/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ico ico--stroke" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r=".9" class="dot"/></svg></a>
+        <a href="https://www.facebook.com/groups/192995836919415/" target="_blank" rel="noopener" aria-label="Facebook grupa"><svg class="ico" viewBox="0 0 24 24"><path d="M14 8.5V6.8c0-.8.5-1.3 1.3-1.3H17V2.3h-2.6C11.6 2.3 10.5 4 10.5 6.6v1.9H8v3.2h2.5V22H14V11.7h2.6l.4-3.2z"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <h3 class="footer__h">Brzi linkovi</h3>
+      <ul class="footer__links">
+        <li><a href="#pocetna">Početna</a></li>
+        <li><a href="#ponuda">Ponuda</a></li>
+        <li><a href="#kolekcije">Kolekcije</a></li>
+        <li><a href="#o-meni">O meni</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="footer__h">Kolekcije</h3>
+      <ul class="footer__links">
+        <li><a href="#ponuda" data-filter-link="bebe">Za bebe</a></li>
+        <li><a href="#ponuda" data-filter-link="vjencanja">Vjenčanja</a></li>
+        <li><a href="#ponuda" data-filter-link="pokloni">Pokloni</a></li>
+        <li><a href="#po-zelji">Po vašoj želji</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="footer__h">Kontakt</h3>
+      <ul class="footer__links footer__contact">
+        <li><a href="https://ig.me/m/rozalina_handmade" target="_blank" rel="noopener">Instagram poruka</a></li>
+        <li><a href="https://www.facebook.com/groups/192995836919415/" target="_blank" rel="noopener">Facebook grupa</a></li>
+        <li><span>Zenica, Bosna i Hercegovina</span></li>
+      </ul>
+      <a href="https://ig.me/m/rozalina_handmade" target="_blank" rel="noopener" class="btn btn--rose footer__cta">Naruči sada</a>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <p>© <span data-year>2026</span> Rozalina Handmade. Sva prava zadržana.</p>
+    <p class="footer__made">Napravljeno s ✿ u BiH</p>
+  </div>
+</footer>
+
+<!-- Product modal -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+  <div class="modal__backdrop" data-close></div>
+  <div class="modal__panel">
+    <button class="modal__close" type="button" aria-label="Zatvori" data-close>×</button>
+    <div class="modal__media"><img src="images/papucice.webp" alt="" id="modal-img" width="640" height="640"></div>
+    <div class="modal__body">
+      <p class="card__cat" id="modal-cat"></p>
+      <h3 id="modal-title"></h3>
+      <p id="modal-desc"></p>
+      <ul class="modal__perks">
+        <li>✿ Ručno rađeno, unikatno</li>
+        <li>✿ Boja i natpis po želji</li>
+        <li>✿ Upakovano kao poklon</li>
+      </ul>
+      <a href="https://ig.me/m/rozalina_handmade" target="_blank" rel="noopener" class="btn btn--rose btn--lg modal__cta">Naruči putem Instagrama</a>
+      <a href="https://www.facebook.com/groups/192995836919415/" target="_blank" rel="noopener" class="modal__alt">ili nas pronađi u Facebook grupi</a>
+    </div>
+  </div>
+</div>
+
+<!-- Wishlist drawer -->
+<aside class="drawer" id="drawer" aria-label="Omiljeni proizvodi" hidden>
+  <div class="drawer__backdrop" data-wish-close></div>
+  <div class="drawer__panel">
+    <div class="drawer__head"><h3>Omiljeno ♡</h3><button type="button" class="modal__close" aria-label="Zatvori" data-wish-close>×</button></div>
+    <ul class="drawer__list" id="wish-list"></ul>
+    <p class="drawer__empty" id="wish-empty">Još niste ništa označili. Kliknite srce na proizvodu koji vam se sviđa.</p>
+    <a href="https://ig.me/m/rozalina_handmade" target="_blank" rel="noopener" class="btn btn--rose drawer__cta">Pošalji upit na Instagramu</a>
+  </div>
+</aside>
+
+<a href="https://ig.me/m/rozalina_handmade" target="_blank" rel="noopener" class="fab" aria-label="Pošalji poruku na Instagramu">
+  <svg class="ico ico--stroke" viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4z"/><path d="M8 10h8M8 13h5"/></svg>
+  <span>Pošalji poruku</span>
+</a>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="script.js" defer></script>
+</body>
+</html>
