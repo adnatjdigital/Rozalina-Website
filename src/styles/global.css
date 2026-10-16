@@ -25,7 +25,7 @@
   --shadow: 0 18px 40px -18px rgba(110, 49, 80, .35);
   --shadow-lg: 0 30px 70px -25px rgba(90, 39, 64, .45);
   --ease: cubic-bezier(.22, .8, .24, 1);
-  --header-h: 84px;
+  --header-h: 92px;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -130,15 +130,11 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .header__inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; height: var(--header-h); transition: height .4s var(--ease); }
 .header.is-scrolled .header__inner { height: 68px; }
 
-.logo { display: inline-flex; align-items: center; gap: 10px; }
-.logo__mark { width: 44px; height: 44px; transition: transform .8s var(--ease); }
-.logo:hover .logo__mark { transform: rotate(-18deg) scale(1.06); }
-.logo__text { display: flex; flex-direction: column; line-height: 1; }
-.logo__name { font-family: var(--script); font-size: 2.15rem; color: var(--rose-600); line-height: .9; padding-right: 4px; }
-.logo__sub { font-size: .62rem; letter-spacing: .5em; text-transform: uppercase; color: var(--muted); margin-top: 4px; padding-left: 3px; }
-.logo--light .logo__name { color: #fff; }
-.logo--light .logo__sub { color: #e8c9d4; }
-.logo--light .logo__mark { filter: brightness(0) invert(1); opacity: .95; }
+.logo { display: inline-flex; align-items: center; flex: none; }
+.logo__img { height: 78px; width: auto; transition: height .4s var(--ease), transform .6s var(--ease); }
+.logo:hover .logo__img { transform: scale(1.03); }
+.header.is-scrolled .logo__img { height: 62px; }
+.logo--light .logo__img { height: 100px; }
 
 .nav { display: flex; align-items: center; gap: 30px; }
 .nav a:not(.btn) {
@@ -585,8 +581,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .container { width: calc(100% - 32px); }
   .topbar__social { display: none; }
   .topbar__msg { font-size: .74rem; }
-  .logo__name { font-size: 1.9rem; }
-  .logo__mark { width: 38px; height: 38px; }
+  .logo__img { height: 60px; }
+  .header.is-scrolled .logo__img { height: 52px; }
   .slide__title { font-size: clamp(2.5rem, 11vw, 3.2rem); }
   .slide__text { font-size: 1rem; }
   .btn--lg { padding: .95em 1.6em; }

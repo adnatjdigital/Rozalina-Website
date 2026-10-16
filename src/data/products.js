@@ -43,7 +43,7 @@ export const products = [
   },
   {
     id: 'kapa', title: 'Kapa i šal Zimska ruža', cat: 'zanju', label: 'Za nju', badge: 'Zima',
-    img: 'kapa-sal.webp', w: 640, h: 640,
+    img: 'kapa-sal.webp', w: 400, h: 500,
     desc: 'Debela heklana kapa i šal od mekane pređe za hladne dane. Dostupno u više boja, a crvena je naša omiljena za zimu.',
   },
   {
