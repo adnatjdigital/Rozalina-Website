@@ -1,0 +1,37 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Rozalina Handmade · Ručno rađeni pokloni iz Zenice',
+  description = 'Rozalina Handmade: heklane papučice, puffy dekice, mede, bidermajeri, poklon boxići i personalizovani pokloni. Ručno rađeno s ljubavlju u Zenici.',
+} = Astro.props;
+---
+<!doctype html>
+<html lang="bs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  <meta name="theme-color" content="#b8607a">
+  <meta property="og:title" content="Rozalina Handmade · Ručno rađeno s ljubavlju">
+  <meta property="og:description" content="Heklani i pleteni pokloni za bebe, vjenčanja i vaše najdraže. Iz Zenice, s ljubavlju.">
+  <meta property="og:image" content="/images/papucice.webp">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/images/logo-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,400;1,500&family=Great+Vibes&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <slot />
+  <script>
+    import '../scripts/main.js';
+  </script>
+</body>
+</html>
